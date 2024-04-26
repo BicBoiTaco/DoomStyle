@@ -7,6 +7,7 @@ extends CharacterBody3D
 @onready var neck := $neck
 @onready var fpscamera := $neck/fpscamera
 
+### FPS Camera movement
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -16,7 +17,7 @@ func _unhandled_input(event):
 		if event is InputEventMouseMotion:
 			neck.rotate_y(-event.relative.x * 0.01)
 			fpscamera.rotate_x(-event.relative.y * 0.01)
-
+			fpscamera.rotation.x =clamp(fpscamera.rotation.x, deg_to_rad(-75), deg_to_rad(75))
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -32,8 +33,8 @@ func _physics_process(delta):
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir = Input.get_vector("left", "right", "forward", "back")
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	var input_dir = Input.get_vector("back", "forward", "left", "right")
+	var direction = (neck.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
