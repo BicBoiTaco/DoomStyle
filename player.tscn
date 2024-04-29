@@ -6,21 +6,19 @@
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_qm8o5"]
 
-[node name="Player" type="Node3D"]
-
-[node name="PlayerBody" type="CharacterBody3D" parent="."]
+[node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_8nnvk")
 
-[node name="neck" type="Node3D" parent="PlayerBody"]
+[node name="neck" type="Node3D" parent="."]
 
-[node name="fpscamera" type="Camera3D" parent="PlayerBody/neck"]
+[node name="fpscamera" type="Camera3D" parent="neck"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
 
-[node name="collisionbody" type="CollisionShape3D" parent="PlayerBody"]
+[node name="collisionbody" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.5, 0)
 shape = SubResource("CapsuleShape3D_m7yjl")
 
-[node name="characterbody" type="MeshInstance3D" parent="PlayerBody"]
+[node name="characterbody" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.5, 0)
 mesh = SubResource("CapsuleMesh_qm8o5")
 skeleton = NodePath("../collisionbody")
