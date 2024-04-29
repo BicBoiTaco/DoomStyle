@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://difurfylclkdu"]
 
-[ext_resource type="PackedScene" uid="uid://biwn06g3fxgfw" path="res://player.tscn" id="1_wv5p4"]
+[ext_resource type="PackedScene" uid="uid://biwn06g3fxgfw" path="res://scenes/player.tscn" id="1_37ucr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6nkwu"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -77,6 +77,6 @@ transform = Transform3D(8.55166, -0.291666, -0.0174176, 3.85807, 0.646487, -0.01
 use_collision = true
 material = SubResource("StandardMaterial3D_2mc3k")
 
-[node name="Player" parent="." instance=ExtResource("1_wv5p4")]
+[node name="Player" parent="." instance=ExtResource("1_37ucr")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8.25706, 0.558303, 2.18553)
 mouse_sens = 0.003

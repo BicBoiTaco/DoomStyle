@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="DoomStyle"
-run/main_scene="res://main.tscn"
+run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://BoomerShooter.png"
+
+[dotnet]
+
+project/assembly_name="DoomStyle"
 
 [input]
 

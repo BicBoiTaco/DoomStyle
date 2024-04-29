@@ -1,0 +1,104 @@
+[gd_scene load_steps=22 format=3 uid="uid://c47yah6aowiyu"]
+
+[ext_resource type="Texture2D" uid="uid://ctpfrbdre4i5a" path="res://assets/hellknight/Front/0000.png" id="1_2m7nt"]
+[ext_resource type="Texture2D" uid="uid://esb1a523nm6h" path="res://assets/hellknight/Front/0002.png" id="2_8jd7w"]
+[ext_resource type="Texture2D" uid="uid://be5y28vg4mo4k" path="res://assets/hellknight/Front/0004.png" id="3_krq2e"]
+[ext_resource type="Texture2D" uid="uid://c3po4du5pos56" path="res://assets/hellknight/Front/0006.png" id="4_d7f0j"]
+[ext_resource type="Texture2D" uid="uid://c0vo418oe818t" path="res://assets/hellknight/Front/0008.png" id="5_j7hvp"]
+[ext_resource type="Texture2D" uid="uid://b60t0d4g7jbh6" path="res://assets/hellknight/Front/0010.png" id="6_x0u64"]
+[ext_resource type="Texture2D" uid="uid://24hs4mt4tf52" path="res://assets/hellknight/Front/0012.png" id="7_05ui0"]
+[ext_resource type="Texture2D" uid="uid://g1pxlgkuap23" path="res://assets/hellknight/Front/0014.png" id="8_pq05q"]
+[ext_resource type="Texture2D" uid="uid://byeb5d8ctlvbi" path="res://assets/hellknight/Front/0016.png" id="9_erwdh"]
+[ext_resource type="Texture2D" uid="uid://df4y6pesbm1c5" path="res://assets/hellknight/Front/0018.png" id="10_b2e60"]
+[ext_resource type="Texture2D" uid="uid://ba2m5ro0rmgva" path="res://assets/hellknight/Front/0020.png" id="11_be2q7"]
+[ext_resource type="Texture2D" uid="uid://by6llx6vfq5se" path="res://assets/hellknight/Front/0022.png" id="12_o6cb1"]
+[ext_resource type="Texture2D" uid="uid://0ktntknvhycw" path="res://assets/hellknight/Front/0024.png" id="13_hy7ww"]
+[ext_resource type="Texture2D" uid="uid://c71urim7i7i2j" path="res://assets/hellknight/Front/0026.png" id="14_kqe7p"]
+[ext_resource type="Texture2D" uid="uid://cg3wdd4yys7s0" path="res://assets/hellknight/Front/0028.png" id="15_hnqhs"]
+[ext_resource type="Texture2D" uid="uid://b7mdy0pjvmxtw" path="res://assets/hellknight/Front/0030.png" id="16_7vnoj"]
+[ext_resource type="Texture2D" uid="uid://cgpddss1wu3fw" path="res://assets/hellknight/Front/0032.png" id="17_lonp5"]
+[ext_resource type="Texture2D" uid="uid://dfl5haoiaaxyt" path="res://assets/hellknight/Front/0034.png" id="18_eesv7"]
+[ext_resource type="Texture2D" uid="uid://d2dktslv8dimp" path="res://assets/hellknight/Front/0036.png" id="19_jnsfb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ij5fb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a5njr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2m7nt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8jd7w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_krq2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_d7f0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_j7hvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_x0u64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_05ui0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pq05q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_erwdh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_b2e60")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_be2q7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_o6cb1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hy7ww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_kqe7p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_hnqhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7vnoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_lonp5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_eesv7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_jnsfb")
+}],
+"loop": true,
+"name": &"run_forward",
+"speed": 5.0
+}]
+
+[node name="hellknight" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.426755, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_ij5fb")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+sprite_frames = SubResource("SpriteFrames_a5njr")
+animation = &"run_forward"
+frame_progress = 0.424682
