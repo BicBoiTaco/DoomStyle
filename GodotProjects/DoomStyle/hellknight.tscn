@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://lk8vil4hesi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wopo1"]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_wopo1")
