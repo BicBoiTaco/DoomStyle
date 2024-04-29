@@ -15,10 +15,6 @@ run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://BoomerShooter.png"
 
-[autoload]
-
-Player="*res://scenes/player.gd"
-
 [dotnet]
 
 project/assembly_name="DoomStyle"
