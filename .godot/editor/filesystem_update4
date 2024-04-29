@@ -1,1 +1,5 @@
 res://scenes/main.tscn
+res://scenes/player.gd
+res://scenes/player.tscn
+res://scenes/hellknight.gd
+res://scenes/hellknight.tscn

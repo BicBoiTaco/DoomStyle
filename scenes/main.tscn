@@ -1,4 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://difurfylclkdu"]
+[gd_scene load_steps=9 format=3 uid="uid://difurfylclkdu"]
+
+[ext_resource type="PackedScene" uid="uid://biwn06g3fxgfw" path="res://scenes/player.tscn" id="1_cyx8n"]
+[ext_resource type="PackedScene" uid="uid://c47yah6aowiyu" path="res://scenes/hellknight.tscn" id="2_e2mhm"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6nkwu"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -38,6 +41,9 @@ transform = Transform3D(18.1513, 0, 0, 0, 0.47983, 0, 0, 0, 20.9649, 0, 0, 0)
 use_collision = true
 material = SubResource("StandardMaterial3D_ih4r6")
 
+[node name="Player" parent="." instance=ExtResource("1_cyx8n")]
+transform = Transform3D(-0.0420955, 0.00297245, -0.999108, 0.00233499, 0.999992, 0.0028767, 0.99911, -0.00221181, -0.0421022, -7.78184, 0.300112, -0.263079)
+
 [node name="Node" type="Node" parent="."]
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Node"]
@@ -74,3 +80,6 @@ material = SubResource("StandardMaterial3D_fdb5e")
 transform = Transform3D(8.55166, -0.291666, -0.0174176, 3.85807, 0.646487, -0.0185154, 0.0350404, 0.00109545, 6.28942, 3.22571, 1.56379, -0.0298986)
 use_collision = true
 material = SubResource("StandardMaterial3D_2mc3k")
+
+[node name="hellknight" parent="." instance=ExtResource("2_e2mhm")]
+transform = Transform3D(2.53211, -0.00161447, -3.09652, 0.00141243, 3.99999, -0.000930537, 3.09652, -0.000504322, 2.53211, 0.00657964, 0.00247563, -7.81279)

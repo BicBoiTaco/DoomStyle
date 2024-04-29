@@ -3,12 +3,12 @@ const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
-var playerpos : Vector2
+@onready var player := get_node("../Player")
+@onready var playerpos = player.playerpos
+@onready var _animated_sprite = $AnimatedSprite3D
 
 func _ready():
-	var player = get_node("/root/Player")
-	var playerpos = player.playerpos
-	
+	_animated_sprite.play("idle")
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
