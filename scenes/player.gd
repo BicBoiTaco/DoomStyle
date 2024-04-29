@@ -1,11 +1,11 @@
-extends CharacterBody3D
+extends CharacterBody3D	
 
 
 @export var speed = 5.0
 @export var sprintspeed = 10.0
 @export var jump_velocity = 4.5
 @export_range(0.001, 0.01) var mouse_sens = 0.01
-
+var playerpos 
 @onready var neck := $neck
 @onready var fpscamera := $neck/fpscamera
 
@@ -50,3 +50,4 @@ func _physics_process(delta):
 		speed = 5
 
 	move_and_slide()
+	playerpos = global_position

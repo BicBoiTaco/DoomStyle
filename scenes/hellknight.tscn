@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://d2dktslv8dimp" path="res://assets/hellknight/Front/0036.png" id="19_jnsfb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ij5fb"]
+size = Vector3(1, 1.01068, 1)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a5njr"]
 animations = [{
@@ -93,12 +94,14 @@ animations = [{
 }]
 
 [node name="hellknight" type="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.426755, 0)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0.426755, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.532623, 0)
 shape = SubResource("BoxShape3D_ij5fb")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 sprite_frames = SubResource("SpriteFrames_a5njr")
-animation = &"run_forward"
-frame_progress = 0.424682
+animation = &"idle"
+frame_progress = 0.168889
