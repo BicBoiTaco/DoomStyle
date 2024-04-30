@@ -11,15 +11,23 @@ func faceplayer():
 	var playerpos = player.playerpos
 	look_at(playerpos)
 
-
-
+func runforward():
+	pass
+	
 func _ready():
 	_animated_sprite.play("idle")
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	# Add the gravity.
 	faceplayer()
+	if global_position.distance_to(player.playerpos) > 5.0:
+		_animated_sprite.play("run_forward")
+		velocity = global_position.direction_to(player.playerpos) * 7
+	else:
+		_animated_sprite.play("idle")
+		
 	move_and_slide()
+
 
 
 
