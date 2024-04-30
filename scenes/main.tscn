@@ -82,4 +82,4 @@ use_collision = true
 material = SubResource("StandardMaterial3D_2mc3k")
 
 [node name="hellknight" parent="." instance=ExtResource("2_e2mhm")]
-transform = Transform3D(2.53211, -0.00161447, -3.09652, 0.00141243, 3.99999, -0.000930537, 3.09652, -0.000504322, 2.53211, 0.00657964, 0.00247563, -7.81279)
+transform = Transform3D(3.00031, -0.0301802, -2.64523, 0.0279249, 3.99987, -0.0139626, 2.64526, -0.0079939, 3.00043, 0.00657962, 0.00247563, -7.81277)
