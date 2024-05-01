@@ -1,2 +1,2 @@
-﻿46067
-/home/devooty/Downloads/Godot_v4.2.2-stable_mono_linux_x86_64/godot
+﻿45283
+/home/devooty/Downloads/Godot_v4.2.2-stable_mono_linux_x86_64/Godot_v4.2.2-stable_mono_linux.x86_64

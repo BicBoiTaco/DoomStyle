@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714441766
+::res://::1714529772
 BoomerShooter.png::CompressedTexture2D::6625251170406597052::1714431019::1714431019::1::::<><>::
 icon.svg::CompressedTexture2D::4861709742651689396::1714431019::1714431019::1::::<><>::
 ::res://assets/::1714431019
@@ -964,10 +964,11 @@ icon.svg::CompressedTexture2D::4861709742651689396::1714431019::1714431019::1:::
 0230.png::CompressedTexture2D::6501941200424724057::1714431019::1714431019::1::::<><>::
 0232.png::CompressedTexture2D::7498969264578120933::1714431019::1714431019::1::::<><>::
 0234.png::CompressedTexture2D::1682085515403093940::1714431019::1714431019::1::::<><>::
-::res://scenes/::1714441393
-hellknight.gd::GDScript::-1::1714435854::0::1::::<>CharacterBody3D<>::
-hellknight.tscn::PackedScene::6875835544417420596::1714441393::0::1::::<><>::uid://ctpfrbdre4i5a::::res://assets/hellknight/Front/0000.png<>res://scenes/hellknight.gd<>uid://esb1a523nm6h::::res://assets/hellknight/Front/0002.png<>uid://be5y28vg4mo4k::::res://assets/hellknight/Front/0004.png<>uid://c3po4du5pos56::::res://assets/hellknight/Front/0006.png<>uid://c0vo418oe818t::::res://assets/hellknight/Front/0008.png<>uid://b60t0d4g7jbh6::::res://assets/hellknight/Front/0010.png<>uid://24hs4mt4tf52::::res://assets/hellknight/Front/0012.png<>uid://g1pxlgkuap23::::res://assets/hellknight/Front/0014.png<>uid://byeb5d8ctlvbi::::res://assets/hellknight/Front/0016.png<>uid://df4y6pesbm1c5::::res://assets/hellknight/Front/0018.png<>uid://ba2m5ro0rmgva::::res://assets/hellknight/Front/0020.png<>uid://by6llx6vfq5se::::res://assets/hellknight/Front/0022.png<>uid://0ktntknvhycw::::res://assets/hellknight/Front/0024.png<>uid://c71urim7i7i2j::::res://assets/hellknight/Front/0026.png<>uid://cg3wdd4yys7s0::::res://assets/hellknight/Front/0028.png<>uid://b7mdy0pjvmxtw::::res://assets/hellknight/Front/0030.png<>uid://cgpddss1wu3fw::::res://assets/hellknight/Front/0032.png<>uid://dfl5haoiaaxyt::::res://assets/hellknight/Front/0034.png<>uid://d2dktslv8dimp::::res://assets/hellknight/Front/0036.png
+::res://scenes/::1714529749
+hellknight.cs::CSharpScript::-1::1714529519::0::1::::<>CharacterBody3D<>::
+hellknight.gd::GDScript::-1::1714529749::0::1::::<>CharacterBody3D<>::
+hellknight.tscn::PackedScene::6875835544417420596::1714529749::0::1::::<><>::uid://ctpfrbdre4i5a::::res://assets/hellknight/Front/0000.png<>res://scenes/hellknight.gd<>uid://esb1a523nm6h::::res://assets/hellknight/Front/0002.png<>uid://be5y28vg4mo4k::::res://assets/hellknight/Front/0004.png<>uid://c3po4du5pos56::::res://assets/hellknight/Front/0006.png<>uid://c0vo418oe818t::::res://assets/hellknight/Front/0008.png<>uid://b60t0d4g7jbh6::::res://assets/hellknight/Front/0010.png<>uid://24hs4mt4tf52::::res://assets/hellknight/Front/0012.png<>uid://g1pxlgkuap23::::res://assets/hellknight/Front/0014.png<>uid://byeb5d8ctlvbi::::res://assets/hellknight/Front/0016.png<>uid://df4y6pesbm1c5::::res://assets/hellknight/Front/0018.png<>uid://ba2m5ro0rmgva::::res://assets/hellknight/Front/0020.png<>uid://by6llx6vfq5se::::res://assets/hellknight/Front/0022.png<>uid://0ktntknvhycw::::res://assets/hellknight/Front/0024.png<>uid://c71urim7i7i2j::::res://assets/hellknight/Front/0026.png<>uid://cg3wdd4yys7s0::::res://assets/hellknight/Front/0028.png<>uid://b7mdy0pjvmxtw::::res://assets/hellknight/Front/0030.png<>uid://cgpddss1wu3fw::::res://assets/hellknight/Front/0032.png<>uid://dfl5haoiaaxyt::::res://assets/hellknight/Front/0034.png<>uid://d2dktslv8dimp::::res://assets/hellknight/Front/0036.png
 main.gd::GDScript::-1::1714431019::0::1::::<>RefCounted<>::
-main.tscn::PackedScene::7732339687500536698::1714441393::0::1::::<><>::uid://biwn06g3fxgfw::::res://scenes/player.tscn<>uid://c47yah6aowiyu::::res://scenes/hellknight.tscn
-player.gd::GDScript::-1::1714431819::0::1::::<>CharacterBody3D<>::
-player.tscn::PackedScene::2994183347912727264::1714431198::0::1::::<><>::res://scenes/player.gd
+main.tscn::PackedScene::7732339687500536698::1714529749::0::1::::<><>::uid://biwn06g3fxgfw::::res://scenes/player.tscn<>uid://c47yah6aowiyu::::res://scenes/hellknight.tscn<>res://scenes/hellknight.cs
+player.gd::GDScript::-1::1714529749::0::1::::Player<>CharacterBody3D<>::
+player.tscn::PackedScene::2994183347912727264::1714529749::0::1::::<><>::res://scenes/player.gd

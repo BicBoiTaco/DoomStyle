@@ -1,14 +1,10 @@
-extends CharacterBody3D	
-
-
+extends CharacterBody3D
 @export var speed = 5.0
 @export var sprintspeed = 10.0
 @export var jump_velocity = 4.5
 @export_range(0.001, 0.01) var mouse_sens = 0.01 
 @onready var neck := $neck
 @onready var fpscamera := $neck/fpscamera
-@onready var playerpos : Vector3 = global_position
-
 ### FPS Camera movement
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
@@ -26,6 +22,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _physics_process(delta):
 	# Add the gravity.
+	
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
@@ -48,5 +45,4 @@ func _physics_process(delta):
 		speed = sprintspeed
 	else:
 		speed = 5
-	playerpos = global_position
 	move_and_slide()
