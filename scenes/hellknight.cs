@@ -17,6 +17,9 @@ public partial class hellknight : CharacterBody3D
 		Node player = GetNode("../Player");
 		Vector3 playerpos = (Vector3)player.Get("global_position");
 		LookAt(playerpos);
+		if(!this.IsOnFloor()){
+			this.Velocity.Y.Equals(Velocity.Y - gravity * delta);
+		}
 		if(this.GlobalPosition.DistanceTo(playerpos) > 5.0){
 			_animated_sprite.Play("run_forward");
 			Velocity = this.GlobalPosition.DirectionTo(playerpos) * 8;
