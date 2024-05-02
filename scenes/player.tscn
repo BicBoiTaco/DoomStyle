@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://biwn06g3fxgfw"]
+[gd_scene load_steps=5 format=3 uid="uid://biwn06g3fxgfw"]
 
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_8nnvk"]
+[ext_resource type="PackedScene" uid="uid://dx3i1lfchpv72" path="res://scenes/gun.tscn" id="2_ocddk"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m7yjl"]
 
@@ -22,3 +23,5 @@ shape = SubResource("CapsuleShape3D_m7yjl")
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.5, 0)
 mesh = SubResource("CapsuleMesh_qm8o5")
 skeleton = NodePath("../collisionbody")
+
+[node name="gun" parent="." instance=ExtResource("2_ocddk")]
