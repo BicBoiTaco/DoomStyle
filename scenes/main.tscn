@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://biwn06g3fxgfw" path="res://scenes/player.tscn" id="1_cyx8n"]
 [ext_resource type="PackedScene" uid="uid://c47yah6aowiyu" path="res://scenes/hellknight.tscn" id="2_e2mhm"]
-[ext_resource type="Script" path="res://scenes/hellknight.cs" id="3_8qk57"]
+[ext_resource type="PackedScene" uid="uid://n0prn53fvs6d" path="res://scenes/target.tscn" id="3_w6gnx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6nkwu"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -83,6 +83,7 @@ transform = Transform3D(8.55166, -0.291666, -0.0174176, 3.85807, 0.646487, -0.01
 use_collision = true
 material = SubResource("StandardMaterial3D_2mc3k")
 
+[node name="target" parent="." instance=ExtResource("3_w6gnx")]
+transform = Transform3D(0.989429, -0.144996, -0.00254652, -0.00256586, 5.35489e-05, -0.999996, 0.144995, 0.989432, -0.000319077, -8.87562, 4.17223, -13.9608)
+
 [node name="hellknight" parent="." instance=ExtResource("2_e2mhm")]
-transform = Transform3D(3.00031, -0.0301802, -2.64523, 0.0279249, 3.99987, -0.0139626, 2.64526, -0.0079939, 3.00042, 0.00657962, 0.00247563, -7.81277)
-script = ExtResource("3_8qk57")
