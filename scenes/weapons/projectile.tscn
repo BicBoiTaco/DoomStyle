@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cfh0aycyd27gm"]
 
-[ext_resource type="Script" path="res://scenes/projectile.gd" id="1_qhq55"]
+[ext_resource type="Script" path="res://scenes/weapons/projectile.gd" id="1_ofhlr"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_34p8f"]
 
@@ -9,7 +9,7 @@
 [node name="projectile" type="Area3D"]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 top_level = true
-script = ExtResource("1_qhq55")
+script = ExtResource("1_ofhlr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_34p8f")

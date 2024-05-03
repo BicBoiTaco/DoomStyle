@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="DoomStyle"
-run/main_scene="res://scenes/main.tscn"
+run/main_scene="res://scenes/playspace/main.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 config/icon="res://BoomerShooter.png"
 
