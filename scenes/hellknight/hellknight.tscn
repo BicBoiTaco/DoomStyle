@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=3 uid="uid://c47yah6aowiyu"]
 
 [ext_resource type="Texture2D" uid="uid://ctpfrbdre4i5a" path="res://assets/hellknight/Front/0000.png" id="1_2m7nt"]
-[ext_resource type="Script" path="res://scenes/hellknight.cs" id="1_3h5pd"]
+[ext_resource type="Script" path="res://scenes/hellknight/hellknight.cs" id="1_3h5pd"]
 [ext_resource type="Texture2D" uid="uid://esb1a523nm6h" path="res://assets/hellknight/Front/0002.png" id="2_8jd7w"]
 [ext_resource type="Texture2D" uid="uid://be5y28vg4mo4k" path="res://assets/hellknight/Front/0004.png" id="3_krq2e"]
 [ext_resource type="Texture2D" uid="uid://c3po4du5pos56" path="res://assets/hellknight/Front/0006.png" id="4_d7f0j"]
@@ -107,3 +107,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 sprite_frames = SubResource("SpriteFrames_a5njr")
 animation = &"idle"
 frame_progress = 0.168889
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+avoidance_enabled = true

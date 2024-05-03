@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dx3i1lfchpv72"]
 
-[ext_resource type="Script" path="res://scenes/gun.gd" id="1_s5ooy"]
-[ext_resource type="PackedScene" uid="uid://cfh0aycyd27gm" path="res://scenes/projectile.tscn" id="2_1bqqw"]
+[ext_resource type="Script" path="res://scenes/weapons/gun.gd" id="1_mb4i2"]
+[ext_resource type="PackedScene" uid="uid://cfh0aycyd27gm" path="res://scenes/weapons/projectile.tscn" id="2_bb7a7"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_d22vu"]
 
@@ -10,8 +10,8 @@
 [sub_resource type="BoxMesh" id="BoxMesh_488bb"]
 
 [node name="gun" type="CanvasLayer"]
-script = ExtResource("1_s5ooy")
-projectile = ExtResource("2_1bqqw")
+script = ExtResource("1_mb4i2")
+projectile = ExtResource("2_bb7a7")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 15
