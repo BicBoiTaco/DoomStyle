@@ -21,8 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://dfl5haoiaaxyt" path="res://assets/hellknight/Front/0034.png" id="18_eesv7"]
 [ext_resource type="Texture2D" uid="uid://d2dktslv8dimp" path="res://assets/hellknight/Front/0036.png" id="19_jnsfb"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ij5fb"]
-size = Vector3(1, 1.01068, 1)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3k5do"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a5njr"]
 animations = [{
@@ -99,8 +98,8 @@ transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 script = ExtResource("1_3h5pd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.532623, 0)
-shape = SubResource("BoxShape3D_ij5fb")
+transform = Transform3D(0.691823, 0, 0, 0, 0.489542, 0, 0, 0, 0.097805, 0, 0.532623, 0)
+shape = SubResource("CapsuleShape3D_3k5do")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
@@ -109,4 +108,7 @@ animation = &"idle"
 frame_progress = 0.168889
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+path_desired_distance = 2.5
+target_desired_distance = 5.0
 avoidance_enabled = true
+debug_enabled = true
