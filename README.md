@@ -23,6 +23,8 @@ and we will achieve that through certain milestones for this project.
 - Godot Visual FX and Ligthing
 - Wave System.
 ### Beta
+- Advanced Mob Behavior.
+- Perks, addons, and attachements.
 - Audio and music
 - more weapons
 - quality of life
