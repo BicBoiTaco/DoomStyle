@@ -5,7 +5,7 @@ public partial class hellknight : CharacterBody3D
 {
 
 
-	public const float Speed = 1.0f;
+	public const float Speed = 5.0f;
 	public int health = 20;
 	public const float JumpVelocity = 4.5f;
 
@@ -25,7 +25,7 @@ public partial class hellknight : CharacterBody3D
 
 
 	public override void _Ready(){
-		
+		player = GetNode<CharacterBody3D>("../Player");
 		_navigationAgent = GetNode<NavigationAgent3D>("./NavigationAgent3D");
 		_animated_sprite = GetNode<AnimatedSprite3D>("./AnimatedSprite3D");
 
@@ -40,6 +40,8 @@ public partial class hellknight : CharacterBody3D
 
 	public override void _PhysicsProcess(double delta)
 	{
+		LookAt(player.GlobalPosition);
+		this.MovementTarget = player.GlobalPosition;;
 		if (_navigationAgent.IsNavigationFinished()){
 			return;
 		}
@@ -47,6 +49,8 @@ public partial class hellknight : CharacterBody3D
 		Vector3 nextPathPosition = _navigationAgent.GetNextPathPosition();
 
 		Velocity = currentAgentPosition.DirectionTo(nextPathPosition) * Speed;
+
+		GD.Print(this.GlobalPosition);
 
 		MoveAndSlide();
 	}
