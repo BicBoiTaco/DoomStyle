@@ -17,12 +17,12 @@ and we will achieve that through certain milestones for this project.
 - Basic Mob Behavior
 - Map Creation/Interactivity
 - User Interface
-- **Build releases (Alpha)**
+### Build releases (Alpha)
 - Player Speed and Gamelay Mechanics
 - Asset Animation and Creation
 - Godot Visual FX and Ligthing
 - Wave System.
-- **Beta**
+### Beta
 - Audio and music
 - more weapons
 - quality of life
