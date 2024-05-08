@@ -1,6 +1,7 @@
 using Godot;
 using System;
 
+
 public partial class hellknight : CharacterBody3D
 {
 
@@ -42,6 +43,7 @@ public partial class hellknight : CharacterBody3D
 		LookAt(player.GlobalPosition);
 		this.MovementTarget = player.GlobalPosition;
 		if (_navigationAgent.IsNavigationFinished()){
+			_animated_sprite.Play("idle");
 			return;
 		}
 	
@@ -49,8 +51,13 @@ public partial class hellknight : CharacterBody3D
 		Vector3 nextPathPosition = _navigationAgent.GetNextPathPosition();
 
 		Velocity = currentAgentPosition.DirectionTo(nextPathPosition) * Speed;
-
-		GD.Print(this.GlobalPosition);
+		float angle_to_velocity = this.GetRealVelocity().AngleTo(Velocity);
+		
+		if(angle_to_velocity < Mathf.Pi / 6 & angle_to_velocity > -Mathf.Pi/6){
+			_animated_sprite.Play("run_forward");
+			GD.Print(angle_to_velocity);
+		}
+		GD.Print(Velocity);
 
 		MoveAndSlide();
 	}
