@@ -25,16 +25,31 @@ public partial class hellknight : CharacterBody3D
 	}
 
 
-	public void animate(float angle_to_vel){
+	public void movement(float angle_to_vel){
 		if(angle_to_vel < Mathf.Pi / 6 & angle_to_vel > -Mathf.Pi / 6){
 
 			_animated_sprite.Play("run_forward");
-			GD.Print(angle_to_vel);
 
-		} else if(angle_to_vel < Mathf.Pi /3 & angle_to_vel > Mathf.Pi/ 6) {
+		} else if(angle_to_vel < Mathf.Pi / 3 & angle_to_vel > Mathf.Pi / 6) {
+
 			_animated_sprite.Play("run_foward_left");
-		} else if(angle_to_vel > -Mathf.Pi /3 & angle_to_vel < -Mathf.Pi/ 6) {
+			GD.Print("true");
+
+		} else if(angle_to_vel > -Mathf.Pi / 3 & angle_to_vel < -Mathf.Pi / 6) {
+
 			_animated_sprite.Play("run_foward_right");
+			GD.Print("true");
+
+		} else if (angle_to_vel < 2 * Mathf.Pi / 3 & angle_to_vel > Mathf.Pi / 3){
+
+			_animated_sprite.Play("run_left");
+			GD.Print("true");
+
+		} else if (angle_to_vel > -2 * Mathf.Pi / 3 & angle_to_vel < -Mathf.Pi / 3){
+
+			_animated_sprite.Play("run_right");
+			GD.Print("true");
+
 		}
 	}
 

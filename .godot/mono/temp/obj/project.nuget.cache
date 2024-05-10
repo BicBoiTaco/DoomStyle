@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "VpVdJHmSa1M+ulvvaiKNpw/TcagiY+MrJ58wSGGzTcmOHdsguIMxmlmJG38bLv667S5Fw0XpqNTLJyL5838IGw==",
+  "success": true,
+  "projectFilePath": "/home/devooty/programming/DoomStyle/DoomStyle.csproj",
+  "expectedPackageFiles": [
+    "/home/devooty/.nuget/packages/godot.sourcegenerators/4.2.2/godot.sourcegenerators.4.2.2.nupkg.sha512",
+    "/home/devooty/.nuget/packages/godotsharp/4.2.2/godotsharp.4.2.2.nupkg.sha512",
+    "/home/devooty/.nuget/packages/godotsharpeditor/4.2.2/godotsharpeditor.4.2.2.nupkg.sha512",
+    "/home/devooty/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.29/microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://c47yah6aowiyu"]
+[gd_scene load_steps=53 format=3 uid="uid://c47yah6aowiyu"]
 
 [ext_resource type="Texture2D" uid="uid://ctpfrbdre4i5a" path="res://assets/hellknight/Front/0000.png" id="1_2m7nt"]
 [ext_resource type="Script" path="res://scenes/hellknight/hellknight.cs" id="1_3h5pd"]
@@ -40,6 +40,16 @@
 [ext_resource type="Texture2D" uid="uid://c1ooackqhyv8c" path="res://assets/hellknight/FrontRight/0036.png" id="29_24nw7"]
 [ext_resource type="Texture2D" uid="uid://ca7itrsuq0732" path="res://assets/hellknight/FrontLeft/0038.png" id="30_p26un"]
 [ext_resource type="Texture2D" uid="uid://dlgc7t2a8tseq" path="res://assets/hellknight/FrontRight/0038.png" id="30_urgw6"]
+[ext_resource type="Texture2D" uid="uid://dldfa36ohdisr" path="res://assets/hellknight/Right/0020.png" id="41_0rsu7"]
+[ext_resource type="Texture2D" uid="uid://bgva43vl1ljsy" path="res://assets/hellknight/Right/0022.png" id="42_8aoc5"]
+[ext_resource type="Texture2D" uid="uid://dl85hm33xmjbb" path="res://assets/hellknight/Right/0024.png" id="43_mm0sk"]
+[ext_resource type="Texture2D" uid="uid://c5ydfv0efjlsc" path="res://assets/hellknight/Right/0026.png" id="44_g20l7"]
+[ext_resource type="Texture2D" uid="uid://cj0wsrwd1382u" path="res://assets/hellknight/Right/0028.png" id="45_ibtx1"]
+[ext_resource type="Texture2D" uid="uid://d7dmucywk0rq" path="res://assets/hellknight/Right/0030.png" id="46_hsi3o"]
+[ext_resource type="Texture2D" uid="uid://cwtbxi38wlejv" path="res://assets/hellknight/Right/0032.png" id="47_jato6"]
+[ext_resource type="Texture2D" uid="uid://b1d21j6e02ohk" path="res://assets/hellknight/Right/0034.png" id="48_h80mo"]
+[ext_resource type="Texture2D" uid="uid://33li7kdt74xf" path="res://assets/hellknight/Right/0036.png" id="49_au204"]
+[ext_resource type="Texture2D" uid="uid://c1tas1scyhkpl" path="res://assets/hellknight/Right/0038.png" id="50_geame"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3k5do"]
 
@@ -148,7 +158,7 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 1.5,
 "texture": ExtResource("21_kscha")
 }, {
 "duration": 1.0,
@@ -163,7 +173,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("25_46jdw")
 }, {
-"duration": 1.0,
+"duration": 1.5,
 "texture": ExtResource("26_4nsxi")
 }, {
 "duration": 1.0,
@@ -180,6 +190,46 @@ animations = [{
 }],
 "loop": true,
 "name": &"run_forward_right",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("41_0rsu7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_8aoc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_mm0sk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_g20l7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_ibtx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_hsi3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_jato6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_h80mo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_au204")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_geame")
+}],
+"loop": true,
+"name": &"run_left ",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"run_right",
 "speed": 5.0
 }]
 
@@ -194,8 +244,8 @@ shape = SubResource("CapsuleShape3D_3k5do")
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 sprite_frames = SubResource("SpriteFrames_a5njr")
-animation = &"run_forward_left"
-frame_progress = 0.510116
+animation = &"idle"
+frame_progress = 0.0492361
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 path_desired_distance = 2.5
