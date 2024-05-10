@@ -25,6 +25,20 @@ public partial class hellknight : CharacterBody3D
 	}
 
 
+	public void animate(float angle_to_vel){
+		if(angle_to_vel < Mathf.Pi / 6 & angle_to_vel > -Mathf.Pi / 6){
+
+			_animated_sprite.Play("run_forward");
+			GD.Print(angle_to_vel);
+
+		} else if(angle_to_vel < Mathf.Pi /3 & angle_to_vel > Mathf.Pi/ 6) {
+			_animated_sprite.Play("run_foward_left");
+		} else if(angle_to_vel > -Mathf.Pi /3 & angle_to_vel < -Mathf.Pi/ 6) {
+			_animated_sprite.Play("run_foward_right");
+		}
+	}
+
+
 	public override void _Ready(){
 		player = GetNode<CharacterBody3D>("../Player");
 
@@ -52,11 +66,9 @@ public partial class hellknight : CharacterBody3D
 
 		Velocity = currentAgentPosition.DirectionTo(nextPathPosition) * Speed;
 		float angle_to_velocity = this.GetRealVelocity().AngleTo(Velocity);
+
+		animate(angle_to_velocity);
 		
-		if(angle_to_velocity < Mathf.Pi / 6 & angle_to_velocity > -Mathf.Pi/6){
-			_animated_sprite.Play("run_forward");
-			GD.Print(angle_to_velocity);
-		}
 		GD.Print(Velocity);
 
 		MoveAndSlide();

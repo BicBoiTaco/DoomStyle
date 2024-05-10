@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c47yah6aowiyu"]
+[gd_scene load_steps=43 format=3 uid="uid://c47yah6aowiyu"]
 
 [ext_resource type="Texture2D" uid="uid://ctpfrbdre4i5a" path="res://assets/hellknight/Front/0000.png" id="1_2m7nt"]
 [ext_resource type="Script" path="res://scenes/hellknight/hellknight.cs" id="1_3h5pd"]
@@ -20,6 +20,26 @@
 [ext_resource type="Texture2D" uid="uid://cgpddss1wu3fw" path="res://assets/hellknight/Front/0032.png" id="17_lonp5"]
 [ext_resource type="Texture2D" uid="uid://dfl5haoiaaxyt" path="res://assets/hellknight/Front/0034.png" id="18_eesv7"]
 [ext_resource type="Texture2D" uid="uid://d2dktslv8dimp" path="res://assets/hellknight/Front/0036.png" id="19_jnsfb"]
+[ext_resource type="Texture2D" uid="uid://dqajfmqk0lwcq" path="res://assets/hellknight/FrontRight/0020.png" id="21_jcjgb"]
+[ext_resource type="Texture2D" uid="uid://0uu01n7se8kd" path="res://assets/hellknight/FrontLeft/0020.png" id="21_kscha"]
+[ext_resource type="Texture2D" uid="uid://ovew8vkqwrbq" path="res://assets/hellknight/FrontRight/0022.png" id="22_6bi0p"]
+[ext_resource type="Texture2D" uid="uid://cxha60xk0c70l" path="res://assets/hellknight/FrontLeft/0022.png" id="22_ryfk0"]
+[ext_resource type="Texture2D" uid="uid://drl3talb42ww6" path="res://assets/hellknight/FrontLeft/0024.png" id="23_lemks"]
+[ext_resource type="Texture2D" uid="uid://db0styulhbtvb" path="res://assets/hellknight/FrontRight/0024.png" id="23_w5uj1"]
+[ext_resource type="Texture2D" uid="uid://c0eoepcq6oklo" path="res://assets/hellknight/FrontLeft/0026.png" id="24_bossk"]
+[ext_resource type="Texture2D" uid="uid://48hqbepo3wfa" path="res://assets/hellknight/FrontRight/0026.png" id="24_xsihu"]
+[ext_resource type="Texture2D" uid="uid://ba30o1aelrw7l" path="res://assets/hellknight/FrontLeft/0028.png" id="25_46jdw"]
+[ext_resource type="Texture2D" uid="uid://0ka8eoyp5kwr" path="res://assets/hellknight/FrontRight/0028.png" id="25_txuig"]
+[ext_resource type="Texture2D" uid="uid://buogcms8may88" path="res://assets/hellknight/FrontLeft/0030.png" id="26_4nsxi"]
+[ext_resource type="Texture2D" uid="uid://co2kknlfwiwf3" path="res://assets/hellknight/FrontRight/0030.png" id="26_ktni1"]
+[ext_resource type="Texture2D" uid="uid://ybop2o5yxdv7" path="res://assets/hellknight/FrontLeft/0032.png" id="27_3isxc"]
+[ext_resource type="Texture2D" uid="uid://dc6xp3hbdye7x" path="res://assets/hellknight/FrontRight/0032.png" id="27_qr1ph"]
+[ext_resource type="Texture2D" uid="uid://x4to3vj36n72" path="res://assets/hellknight/FrontRight/0034.png" id="28_0q5tu"]
+[ext_resource type="Texture2D" uid="uid://bc40olil7be2k" path="res://assets/hellknight/FrontLeft/0034.png" id="28_2q0df"]
+[ext_resource type="Texture2D" uid="uid://2w0svrosx3yt" path="res://assets/hellknight/FrontLeft/0036.png" id="29_21kgo"]
+[ext_resource type="Texture2D" uid="uid://c1ooackqhyv8c" path="res://assets/hellknight/FrontRight/0036.png" id="29_24nw7"]
+[ext_resource type="Texture2D" uid="uid://ca7itrsuq0732" path="res://assets/hellknight/FrontLeft/0038.png" id="30_p26un"]
+[ext_resource type="Texture2D" uid="uid://dlgc7t2a8tseq" path="res://assets/hellknight/FrontRight/0038.png" id="30_urgw6"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3k5do"]
 
@@ -91,6 +111,76 @@ animations = [{
 "loop": true,
 "name": &"run_forward",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_jcjgb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_6bi0p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_w5uj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_xsihu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_txuig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ktni1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_qr1ph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_0q5tu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_24nw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_urgw6")
+}],
+"loop": true,
+"name": &"run_forward_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_kscha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ryfk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_lemks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_bossk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_46jdw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_4nsxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_3isxc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_2q0df")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_21kgo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_p26un")
+}],
+"loop": true,
+"name": &"run_forward_right",
+"speed": 5.0
 }]
 
 [node name="hellknight" type="CharacterBody3D" groups=["enemy"]]
@@ -104,8 +194,8 @@ shape = SubResource("CapsuleShape3D_3k5do")
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 sprite_frames = SubResource("SpriteFrames_a5njr")
-animation = &"idle"
-frame_progress = 0.168889
+animation = &"run_forward_left"
+frame_progress = 0.510116
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 path_desired_distance = 2.5
