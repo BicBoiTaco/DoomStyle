@@ -245,7 +245,6 @@ shape = SubResource("CapsuleShape3D_3k5do")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 sprite_frames = SubResource("SpriteFrames_a5njr")
 animation = &"idle"
-frame_progress = 0.0492361
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 path_desired_distance = 2.5

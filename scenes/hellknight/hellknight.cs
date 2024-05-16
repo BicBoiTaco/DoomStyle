@@ -16,6 +16,7 @@ public partial class hellknight : CharacterBody3D
 	private AnimatedSprite3D _animated_sprite;
 	private NavigationAgent3D _navigationAgent;
 	public CharacterBody3D player;
+	private Vector3 lastPathPosition;
 
 
 	public Vector3 MovementTarget
@@ -26,29 +27,32 @@ public partial class hellknight : CharacterBody3D
 
 
 	public void movement(float angle_to_vel){
-		if(angle_to_vel < Mathf.Pi / 6 & angle_to_vel > -Mathf.Pi / 6){
 
+		if(angle_to_vel < Mathf.Pi / 6 & angle_to_vel > -Mathf.Pi / 6) {
 			_animated_sprite.Play("run_forward");
 
 		} else if(angle_to_vel < Mathf.Pi / 3 & angle_to_vel > Mathf.Pi / 6) {
 
-			_animated_sprite.Play("run_foward_left");
-			GD.Print("true");
+			_animated_sprite.Play("run_forward_right");
+			GD.Print(angle_to_vel);
+			GD.Print("true fr_right");
 
 		} else if(angle_to_vel > -Mathf.Pi / 3 & angle_to_vel < -Mathf.Pi / 6) {
 
-			_animated_sprite.Play("run_foward_right");
-			GD.Print("true");
+			_animated_sprite.Play("run_forward_left");
+			GD.Print(angle_to_vel);
+			GD.Print("true fr_left");
 
 		} else if (angle_to_vel < 2 * Mathf.Pi / 3 & angle_to_vel > Mathf.Pi / 3){
 
+			GD.Print(angle_to_vel);
 			_animated_sprite.Play("run_left");
-			GD.Print("true");
+			GD.Print("true left");
 
 		} else if (angle_to_vel > -2 * Mathf.Pi / 3 & angle_to_vel < -Mathf.Pi / 3){
-
+			GD.Print(angle_to_vel);
 			_animated_sprite.Play("run_right");
-			GD.Print("true");
+			GD.Print("true right");
 
 		}
 	}
@@ -69,6 +73,7 @@ public partial class hellknight : CharacterBody3D
 
 	public override void _PhysicsProcess(double delta)
 	{
+
 		LookAt(player.GlobalPosition);
 		this.MovementTarget = player.GlobalPosition;
 		if (_navigationAgent.IsNavigationFinished()){
@@ -80,11 +85,10 @@ public partial class hellknight : CharacterBody3D
 		Vector3 nextPathPosition = _navigationAgent.GetNextPathPosition();
 
 		Velocity = currentAgentPosition.DirectionTo(nextPathPosition) * Speed;
-		float angle_to_velocity = this.GetRealVelocity().AngleTo(Velocity);
+		float angle_to_velocity = this.GetRealVelocity().SignedAngleTo(Velocity, player.GlobalPosition);
 
-		animate(angle_to_velocity);
+		movement(angle_to_velocity);
 		
-		GD.Print(Velocity);
 
 		MoveAndSlide();
 	}
