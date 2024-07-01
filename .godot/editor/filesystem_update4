@@ -1,0 +1,5 @@
+res://scenes/playspace/main.tscn
+res://scenes/weapons/gun.tscn
+res://scenes/weapons/projectiles/projectile.tscn
+res://scenes/weapons/projectiles/explosive_projectile.tscn
+res://scenes/hellknight/hellknight.cs

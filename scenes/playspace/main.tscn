@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://difurfylclkdu"]
+[gd_scene load_steps=9 format=3 uid="uid://difurfylclkdu"]
 
 [ext_resource type="PackedScene" uid="uid://biwn06g3fxgfw" path="res://scenes/player/player.tscn" id="1_1304n"]
+[ext_resource type="PackedScene" uid="uid://c0vk0f3gfvnr2" path="res://scenes/weapons/projectiles/explosive_projectile.tscn" id="1_unvap"]
 [ext_resource type="PackedScene" uid="uid://n0prn53fvs6d" path="res://scenes/target.tscn" id="2_des4w"]
 [ext_resource type="PackedScene" uid="uid://c47yah6aowiyu" path="res://scenes/hellknight/hellknight.tscn" id="3_62bsw"]
 
@@ -186,7 +187,7 @@ collision_layer = 2
 material = SubResource("StandardMaterial3D_fdb5e")
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="NavigationRegion3D/Stairs4"]
-transform = Transform3D(8.55166, -0.291666, -0.0174176, 3.85807, 0.646487, -0.0185154, 0.0350404, 0.00109545, 6.28942, 3.22571, 1.56379, -0.0298986)
+transform = Transform3D(8.55166, -0.291666, -0.0174175, 3.85806, 0.646484, -0.0185152, 0.0350404, 0.00109545, 6.28942, 3.22571, 1.56379, -0.0298996)
 use_collision = true
 material = SubResource("StandardMaterial3D_2mc3k")
 
@@ -194,7 +195,17 @@ material = SubResource("StandardMaterial3D_2mc3k")
 transform = Transform3D(-0.0420955, 0.00297245, -0.999108, 0.00233499, 0.999992, 0.0028767, 0.99911, -0.00221181, -0.0421022, -7.78184, 0.300112, -0.263079)
 
 [node name="target" parent="." instance=ExtResource("2_des4w")]
-transform = Transform3D(0.989429, -0.144996, -0.00254652, -0.00256586, 5.35489e-05, -0.999996, 0.144995, 0.989432, -0.000319077, -8.87562, 4.17223, -13.9608)
+transform = Transform3D(0.989429, -0.144996, -0.00254652, -0.00256586, 5.35491e-05, -0.999996, 0.144995, 0.989432, -0.000319077, -18.6724, 4.1911, 5.09517)
 
 [node name="hellknight" parent="." instance=ExtResource("3_62bsw")]
 transform = Transform3D(4, 8.94715e-10, 4.65661e-10, -1.07832e-09, 4, 0, 0, -1.16415e-10, 4, 0.0125913, 0.00295479, -9.36276)
+
+[node name="explosive_projectile" parent="." instance=ExtResource("1_unvap")]
+transform = Transform3D(0.248613, 0, 0, 0, 0.248613, 0, 0, 0, 0.248613, -13.2415, 1.24558, -2.06329)
+speed = 0
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(10.7055, -1.17072e-07, 8.61473e-09, -1.81642e-07, 7.81209, 2.21189e-09, -2.8871e-08, -8.84756e-09, 1.01519, -15.4865, 5.49935, -0.0211483)
+use_collision = true
+collision_layer = 7
+size = Vector3(1.22375, 1.36218, 1)
